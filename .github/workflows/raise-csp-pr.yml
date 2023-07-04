@@ -17,7 +17,7 @@ jobs:
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.TOKEN }}
-          branch: your-branch-name
+          branch: csp-update
           title: Auto-generated PR
           body: This PR was automatically generated when the branch was updated.
 
