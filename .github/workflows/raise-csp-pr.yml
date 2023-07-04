@@ -18,6 +18,7 @@ jobs:
         with:
           token: ${{ secrets.TOKEN }}
           branch: csp-update
+          base: main
           title: Auto-generated PR
           body: This PR was automatically generated when the branch was updated.
 
