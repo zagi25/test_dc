@@ -1,0 +1,45 @@
+[data-event-name] {
+  /* display: none; */
+  -webkit-transition: max-height 1s;
+  -moz-transition: max-height 1s;
+  -ms-transition: max-height 1s;
+  -o-transition: max-height 1s;
+  transition: max-height 1s;
+  max-height: 0;
+  overflow: hidden;
+}
+
+[data-current-event=cancel] [data-event-name=cancel],
+[data-current-event=complete] [data-event-name=complete],
+[data-current-event=conversion] [data-event-name=conversion],
+[data-current-event=conversion] [data-event-name=complete],
+[data-current-event=download] [data-event-name=download],
+[data-current-event=preview] [data-event-name=preview],
+[data-current-event=repeat] [data-event-name=repeat],
+[data-current-event=start] [data-event-name=start],
+[data-current-event=upload] [data-event-name=upload],
+[data-current-event=uploadcomplete] [data-event-name=uploadcomplete],
+[data-current-event=upsell] [data-event-name=upsell],
+body:not([data-current-event]) [data-event-name=onload] {
+  /* display: block; */
+  max-height: 20000px;
+}
+
+.eventsShowAll .eventwrapper {
+  padding: 5px;
+  background-color: #ccd9ff;
+}
+
+.eventsShowAll .eventwrapper.complete,
+.eventsShowAll .eventwrapper.preview {
+  padding: 5px;
+  background-color: #acbff8;
+}
+
+[data-current-event=complete] .fake-dc-wrapper,
+[data-current-event=complete] #CID,
+[data-current-event=uploadcomplete] .fake-dc-wrapper,
+[data-current-event=uploadcomplete] #CID {
+  top: 30px;
+  position: relative;
+}
