@@ -210,6 +210,8 @@ const styleSrc = [
   'http://localhost:6456/',
   '*.hlx.page',
   '*.hlx.live',
+  'cdn.honey.io',
+  'fonts.googleapis.com',
   ';',
 ];
 
