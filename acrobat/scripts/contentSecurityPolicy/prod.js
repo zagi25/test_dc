@@ -226,6 +226,8 @@ const styleSrc = [
   'use.typekit.net',
   'main--milo--adobecom.hlx.page',
   'p.typekit.net',
+  'cdn.honey.io',
+  'fonts.googleapis.com',
   ';',
 ];
 
