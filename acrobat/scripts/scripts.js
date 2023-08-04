@@ -21,6 +21,9 @@ const setLibs = (prodLibs, location) => {
   if (branch === 'local') return 'http://localhost:6456/libs';
   const tld = hostname.includes('live') ? 'live' : 'page';
   return branch.includes('--') ? `https://${branch}.hlx.${tld}/libs` : `https://${branch}--milo--adobecom.hlx.${tld}/libs`;
+
+
+
 }
 
 function loadStyles(paths) {
