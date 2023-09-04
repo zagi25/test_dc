@@ -11,7 +11,7 @@ on:
       - main
 jobs:
   run-tests:
-    name: Running tests
+    name: Running Lint check
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -33,5 +33,5 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run the tests
-      run: xvfb-run -a npm lint
+    - name: Run the lint
+      run: xvfb-run -a npm run lint
