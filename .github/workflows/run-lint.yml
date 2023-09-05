@@ -1,37 +1,19 @@
 name: Lint
 on:
-  push:
-    branches:
-      - stage
-      - main
   pull_request:
     types: [opened, synchronize, reopened, edited]
     branches:
       - stage
       - main
 jobs:
-  run-tests:
-    name: Running Lint check
+  run-eslint:
+    name: Running eslint check
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [18.x]
+    permissions:
+        contents: read
+        pull-requests: write
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        fetch-depth: 1
-
-    - name: Set up Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-
-    - name: Install XVFB
-      run: sudo apt-get install xvfb
-
-    - name: Install dependencies
-      run: npm install
-
-    - name: Run the lint
-      run: xvfb-run -a npm run lint
+      - uses: actions/checkout@v3
+      - uses: reviewdog/action-eslint@v1
+        with:
+          github_token: ${{ secrets.TOKEN }}
