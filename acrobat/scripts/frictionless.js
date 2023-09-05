@@ -1,4 +1,4 @@
-import reviewAlloy from './alloy/review.js';
+import reviewAlloy from './alloy/review';
 import reviewFeedbackAlloy from './alloy/reviewFeedback.js';
 import browserExtAlloy from './alloy/browserExt.js'
 
