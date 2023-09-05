@@ -29,3 +29,5 @@ jobs:
     - name: Install dependencies
       run: npm install
     - uses: reviewdog/action-eslint@v1
+      with:
+        filter_mode: file
