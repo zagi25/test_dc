@@ -15,6 +15,7 @@ jobs:
         node-version: [18.x]
 
     permissions:
+      issues: write
       checks: write
       contents: write
       pull-requests: write
@@ -42,6 +43,7 @@ jobs:
     name: runner / stylelint
     runs-on: ubuntu-latest
     permissions:
+      issues: write
       checks: write
       contents: write
       pull-requests: write
